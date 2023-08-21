@@ -1,7 +1,7 @@
 # CHT_Manager
 CHT Maker is a user-friendly Python application for creating and managing cheat files (.cht) commonly used in emulators for video games. With CHT Maker, you can easily organize, edit, and create cheat codes for your favorite games, making it a valuable tool for gamers who enjoy enhancing their gaming experience. The tool provides an intuitive graphical interface, allowing users to load existing cheat files, modify cheat entries, and save their changes. Additionally, it supports the creation of new cheat entries, making it convenient for gamers to share and use cheat codes. CHT Maker simplifies the process of managing cheat codes, making gaming more enjoyable and customizable.
 
-DOWNLOAD: [Lates Release](https://github.com/nsilveri/CHT_Manager/releases/latest)
+DOWNLOAD: [Latest Release](https://github.com/nsilveri/CHT_Manager/releases/latest)
 
 
     Main screen
