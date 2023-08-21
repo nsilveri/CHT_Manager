@@ -57,9 +57,12 @@ def update_cheat_list(cheats):
         cheat_list.insert(tk.END, cheat)
 
 def show_cheat_details(event):
+    global SELECTED_ITEM
+
     if cheat_list.curselection():
         selected = cheat_list.get(cheat_list.curselection()[0])
-        SELECTED_ITEM = selected
+        SELECTED_ITEM = cheat_list.curselection()[0]
+        print("SELECTED_ITEM: " + str(SELECTED_ITEM))
         print(selected)
         print(type(selected))
 
@@ -84,18 +87,20 @@ def show_cheat_details(event):
         delete_button.config(state=tk.DISABLED)
 
 def save_changes():
-    if cheat_list.curselection():
-        selected_index = cheat_list.curselection()[0]
-        selected = cheat_list.get(selected_index)
+    global SELECTED_ITEM
+
+    if SELECTED_ITEM != None: #cheat_list.curselection():
+        #selected_index = cheat_list.curselection()[0]
+        selected = cheat_list.get(SELECTED_ITEM)#(selected_index)
         cheat = selected
         
         new_description = description_entry.get()
         new_code = code_entry.get()
         modified_cheat = (new_description, new_code, "false")  
-        cheats[selected_index] = modified_cheat
-        cheat_list.delete(selected_index)  
-        cheat_list.insert(selected_index, modified_cheat)  
-        print(cheats[selected_index])
+        cheats[SELECTED_ITEM] = modified_cheat
+        cheat_list.delete(SELECTED_ITEM)#(selected_index)  
+        cheat_list.insert(SELECTED_ITEM, modified_cheat)#(selected_index, modified_cheat)  
+        print(cheats[SELECTED_ITEM])
         print(cheat_list)
         SELECTED_ITEM = None
         messagebox.showinfo("Save", "Changes have been successfully saved.")
