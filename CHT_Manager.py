@@ -16,12 +16,10 @@ def load_file():
 
 def extract_value(input_string):
     if (input_string.find("desc") != -1) or (input_string.find("code") != -1):
-        TEST = "DESC_CODE"
         start_index = input_string.find('"')
         end_index = input_string.find('"', start_index + 1)
         extracted_text = input_string[start_index + 1:end_index]
     elif (input_string.find("enable") != -1):
-        TEST = "ENABLE"
         if input_string.find("true"):
             extracted_text = "true"
         elif input_string.find("false"):
