@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog, messagebox
+from tkinter import filedialog, messagebox, ttk
 
 DESCRIPTION = 0
 CODE = 1
@@ -139,40 +139,68 @@ def save_content_to_file():
         with open(filepath, "w") as file:
             file.write("\n".join(content))
 
+def info_window():
+    messagebox.showinfo("Info", "Version: 0.1.1 \n21/08/2023\n\nCredits: Nicola Silveri\nGithub: https://github.com/nsilveri/CHT_Manager")
+
 root = tk.Tk()
 root.title("Cheat Code Management")
 
 load_button = tk.Button(root, text="Load .cht File", command=load_file)
 cheat_list = tk.Listbox(root)
+
+modification_cheat_label = tk.Label(root, text="Mod selected cheat")
 description_label = tk.Label(root, text="Description:")
 description_entry = tk.Entry(root, state=tk.DISABLED)
+
 code_label = tk.Label(root, text="Code:")
 code_entry = tk.Entry(root, state=tk.DISABLED)
+
 save_button = tk.Button(root, text="Save Changes", command=save_changes, state=tk.DISABLED)
 delete_button = tk.Button(root, text="Delete", command=delete_cheat, state=tk.DISABLED)
+
+new_cheat_label = tk.Label(root, text="Add new cheat")
 new_description_label = tk.Label(root, text="New Description:")
 new_description_entry = tk.Entry(root)
 new_code_label = tk.Label(root, text="New Code:")
 new_code_entry = tk.Entry(root)
 new_cheat_button = tk.Button(root, text="Create New Cheat", command=create_new_cheat)
-save_file_button = tk.Button(root, text="Save As...", command=save_content_to_file)
+
+save_as_file_button = tk.Button(root, text="Save As...", command=save_content_to_file)
+info_button = tk.Button(root, text="Info", command=info_window)
+
+separator_mod_new_code = ttk.Separator(root, orient="horizontal")
+separator_save_file_h = ttk.Separator(root, orient="horizontal")
+separator_save_file_v = ttk.Separator(root, orient="vertical")
+
+credits_label = tk.Label(root, text="Credits: Nicola Silveri")
 
 cheat_list.bind("<Double-Button-1>", show_cheat_details)
 
 load_button.grid(row=0, column=0)
 cheat_list.grid(row=1, column=0, rowspan=6)
-description_label.grid(row=1, column=1)
-description_entry.grid(row=1, column=2)
-code_label.grid(row=2, column=1)
-code_entry.grid(row=2, column=2)
-save_button.grid(row=3, column=1, columnspan=2)
-delete_button.grid(row=4, column=1, columnspan=2)
-new_description_label.grid(row=5, column=1)
-new_description_entry.grid(row=5, column=2)
-new_code_label.grid(row=6, column=1)
-new_code_entry.grid(row=6, column=2)
-new_cheat_button.grid(row=7, column=1, columnspan=2)
-save_file_button.grid(row=7, column=3)
+
+modification_cheat_label.grid(row=1, column=2)
+description_label.grid(row=2, column=1)
+description_entry.grid(row=2, column=2)
+code_label.grid(row=3, column=1)
+code_entry.grid(row=3, column=2)
+save_button.grid(row=4, column=1, columnspan=2)
+delete_button.grid(row=4, column=2, columnspan=2)
+
+new_cheat_label.grid(row=6, column=2)
+new_description_label.grid(row=7, column=1)
+new_description_entry.grid(row=7, column=2)
+new_code_label.grid(row=8, column=1)
+new_code_entry.grid(row=8, column=2)
+new_cheat_button.grid(row=9, column=1, columnspan=2)
+
+save_as_file_button.grid(row=12, column=3)
+info_button.grid(row=12, column=4, columnspan=2)
+
+separator_mod_new_code.grid(row=5, column=1, columnspan=3, sticky="ew")
+
+#separator_save_file_h.grid(row=11, column=3, columnspan=1, sticky="ew")
+#separator_save_file_v.grid(row=12, column=3, rowspan=1, sticky="ns")
 
 cheats = {}
 
