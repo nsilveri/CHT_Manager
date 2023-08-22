@@ -73,7 +73,7 @@ Advertisement:
       
   Sintax:
       
-    CHEAT_NAME(you can add a final numeber) CHEAT_CODE_1 CHEAT_CODE_2 ...
+    CHEAT_NAME (optional final name number) CHEAT_CODE_1 CHEAT_CODE_2 ...
 
 <p align="center">
   <img width="55%" height="55%" src="images/parse_cheat_paste_window.jpg">
