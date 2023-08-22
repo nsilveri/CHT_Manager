@@ -54,7 +54,7 @@ Advertisement:
   <img width="55%" height="55%" src="images/Making_new_cheat_item.jpg">
 </p>
 
-    Adding new itam cheat:
+    Adding new item cheat:
 <p align="center">
   <img width="55%" height="55%" src="images/adding_new_cheat_item.jpg">
 </p>
@@ -64,13 +64,41 @@ Advertisement:
   <img width="55%" height="55%" src="images/selected_new_item.jpg">
 </p>
 
+    Parse cheat function:
+
+      you can add new cheats simply pasting a list of cheats like this:
+<p align="center">
+  <img width="55%" height="55%" src="images/list_cheat_notepad.jpg">
+</p>
+      
+  Sintax:
+      
+    CHEAT_NAME(you can add a final numeber) CHEAT_CODE_1 CHEAT_CODE_2 ...
+
+<p align="center">
+  <img width="55%" height="55%" src="images/parse_cheat_paste_window.jpg">
+</p>
+
+<p align="center">
+  <img width="55%" height="55%" src="images/parse_cheat_created_items.jpg">
+</p>
+
     Saving edited list in a cht file:
 <p align="center">
   <img width="55%" height="55%" src="images/saving_new_cht_file.jpg">
 </p>
 
-NEXT FEATURES:
+RELEASES:
 
-    - Ability to extract an item cheat by copying and pasting one or more lines of cheats, for example, from a web page.
+    The release is made with "pyinstaller"
 
-    - Enable state select
+CHANGELOG:
+    
+    0.1: 
+        Initial release
+    ----
+    0.1.1:
+          Some GUI changes
+    ----
+    0.2: 
+        Added parse cheats function
