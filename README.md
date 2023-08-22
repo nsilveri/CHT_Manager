@@ -51,7 +51,7 @@ Advertisement:
 
     Making new item:
 <p align="center">
-  <img width="55%" height="55%" src="images/Making_new_cheat_item.jpg">
+  <img width="55%" height="55%" src="images/making_new_cheat_item.jpg">
 </p>
 
     Adding new item cheat:
